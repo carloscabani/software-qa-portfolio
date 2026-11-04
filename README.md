@@ -142,16 +142,21 @@ software-qa-portfolio/
 
 - [x] QA fundamentals and software testing concepts
 - [x] Initial manual Test Plan
-- [ ] Functional testing and test case design
-- [ ] Positive and negative testing
-- [ ] Equivalence partitioning and boundary value analysis
-- [ ] Bug reporting and defect management
-- [ ] Smoke, regression, exploratory and E2E testing
+- [x] Functional testing and test case design
+- [x] Positive and negative testing
+- [~] Equivalence partitioning and boundary value analysis
+- [x] Bug reporting and defect management
+- [~] Smoke, regression, exploratory and E2E testing
 - [ ] Agile and Scrum fundamentals
 - [ ] REST API testing with Postman
 - [ ] JavaScript fundamentals for test automation
 - [ ] Cypress automated testing
 - [ ] Automated test execution in CI/CD
+
+**Legend:**
+- `[x]` Completed
+- `[~]` In progress / fundamentals covered
+- `[ ]` Not started
 
 ## Project Goals
 
