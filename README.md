@@ -146,7 +146,10 @@ software-qa-portfolio/
 - [x] Positive and negative testing
 - [~] Equivalence partitioning and boundary value analysis
 - [x] Bug reporting and defect management
-- [~] Smoke, regression, exploratory and E2E testing
+- [x] Smoke testing
+- [x] Exploratory testing
+- [x] Regression testing
+- [ ] End-to-end testing
 - [ ] Agile and Scrum fundamentals
 - [ ] REST API testing with Postman
 - [ ] JavaScript fundamentals for test automation
