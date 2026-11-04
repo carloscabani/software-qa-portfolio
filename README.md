@@ -140,16 +140,18 @@ software-qa-portfolio/
 
 ## Learning Roadmap
 
+## Learning Roadmap
+
 - [x] QA fundamentals and software testing concepts
 - [x] Initial manual Test Plan
 - [x] Functional testing and test case design
 - [x] Positive and negative testing
 - [~] Equivalence partitioning and boundary value analysis
-- [x] Bug reporting and defect management
+- [~] Bug reporting and defect management
 - [x] Smoke testing
-- [x] Exploratory testing
 - [x] Regression testing
-- [ ] End-to-end testing
+- [x] Exploratory testing
+- [x] End-to-end testing
 - [ ] Agile and Scrum fundamentals
 - [ ] REST API testing with Postman
 - [ ] JavaScript fundamentals for test automation
