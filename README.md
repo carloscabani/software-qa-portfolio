@@ -152,8 +152,8 @@ software-qa-portfolio/
 - [x] Regression testing
 - [x] Exploratory testing
 - [x] End-to-end testing
-- [ ] Agile and Scrum fundamentals
-- [ ] REST API testing with Postman
+- [x] Agile and Scrum fundamentals
+- [x] REST API testing with Postman
 - [ ] JavaScript fundamentals for test automation
 - [ ] Cypress automated testing
 - [ ] Automated test execution in CI/CD
