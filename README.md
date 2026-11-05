@@ -154,7 +154,7 @@ software-qa-portfolio/
 - [x] End-to-end testing
 - [x] Agile and Scrum fundamentals
 - [x] REST API testing with Postman
-- [ ] JavaScript fundamentals for test automation
+- [x] JavaScript fundamentals for test automation
 - [ ] Cypress automated testing
 - [ ] Automated test execution in CI/CD
 
@@ -162,6 +162,34 @@ software-qa-portfolio/
 - `[x]` Completed
 - `[~]` In progress / fundamentals covered
 - `[ ]` Not started
+
+## QA Test Runner
+
+A simple JavaScript-based test execution tool developed to practice
+JavaScript fundamentals and basic QA automation concepts.
+
+### Features
+
+- Modular test case management
+- Test validation using comparison operators
+- Automated PASS / FAIL results
+- Invalid test data detection
+- Execution summary report
+- Success rate calculation
+
+### Technologies
+
+- JavaScript
+- Node.js
+- CommonJS modules
+
+### Execution
+
+Run the following command from the project root:
+
+```bash
+node 04-qa-test-runner/test-runner.js
+
 
 ## Project Goals
 
