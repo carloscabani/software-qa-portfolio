@@ -1,16 +1,16 @@
 # Software QA Portfolio
 
-**Manual Testing | API Testing | JavaScript | Cypress | Agile & Scrum**
+**Manual Testing | API Testing | JavaScript | Cypress | Agile & Scrum | CI/CD**
 
 ## About This Repository
 
 Welcome to my Software Quality Assurance portfolio!
 
-This repository documents my hands-on learning journey in software testing and quality assurance, from manual testing fundamentals to automated testing using JavaScript and Cypress.
+This repository documents my practical learning journey in software testing and quality assurance, from manual testing fundamentals to automated testing using JavaScript and Cypress.
 
-The goal is to develop practical QA skills by designing test cases, executing tests, documenting defects, validating APIs, and progressively automating real testing scenarios.
+The projects demonstrate my experience designing and executing test cases, documenting defects, validating REST APIs, developing JavaScript testing tools, and implementing automated test execution through GitHub Actions.
 
-Each project will include structured documentation, test results, and supporting evidence as it becomes available.
+Each section includes documentation, test results, and supporting evidence where applicable.
 
 ## Tech Stack & Tools
 
@@ -19,18 +19,18 @@ Each project will include structured documentation, test results, and supporting
 | Manual Testing | Test Plans, Test Cases, Bug Reports |
 | API Testing | Postman, REST APIs, JSON |
 | Automation Testing | Cypress |
-| Programming | JavaScript |
-| Version Control | Git & GitHub |
+| Programming | JavaScript, Node.js |
+| Version Control | Git, GitHub |
 | Agile Methodologies | Scrum, User Stories, Acceptance Criteria |
-| CI/CD (Planned) | GitHub Actions |
+| CI/CD | GitHub Actions |
 
 ## Projects
 
 ### 01 — Manual Testing: SauceDemo
 
-**Application Under Test:** https://www.saucedemo.com/
+**Application Under Test:** [SauceDemo](https://www.saucedemo.com/)
 
-This project focuses on validating the core functionalities of an e-commerce demo application through structured manual testing.
+Manual testing of an e-commerce demo application through structured test planning, test case design, execution, and defect documentation.
 
 **Testing Scope:**
 - Login and authentication
@@ -41,13 +41,13 @@ This project focuses on validating the core functionalities of an e-commerce dem
 
 **Testing Approaches:**
 - Functional Testing
+- Positive and Negative Testing
 - Smoke Testing
 - Exploratory Testing
 - Regression Testing
-- Acceptance Testing
 - End-to-End Testing
 
-**Planned Deliverables:**
+**Deliverables:**
 - Test Plan
 - Test Scenarios and Test Cases
 - Bug Reports
@@ -56,55 +56,110 @@ This project focuses on validating the core functionalities of an e-commerce dem
 - Smoke and Regression Test Suites
 - Exploratory Testing Report
 
-**Current Progress:** Initial Test Plan drafted. Test case design and execution are next.
-
 ### 02 — API Testing with Postman
 
-*Planned*
+REST API testing using Postman and the JSONPlaceholder API.
 
-This project will focus on validating REST API functionality using Postman.
-
-**Learning Objectives:**
+**Testing Coverage:**
 - HTTP methods and status codes
+- GET, POST, PUT, PATCH, and DELETE requests
 - Request and response validation
 - Positive and negative API testing
-- JSON data validation
-- Postman collections and environment variables
-- Automated API assertions using JavaScript
-- Collection execution with Newman
+- JSON structure and data type validation
+- Automated assertions using JavaScript
+- Postman collections
 
-### 03 — Agile & Scrum
+**Key Concepts Practiced:**
+- REST API fundamentals
+- HTTP status codes
+- Response body validation
+- Automated test scripts
+- API test execution and reporting
 
-*Planned*
+### 03 — JavaScript Fundamentals
 
-This section will document a simulated Agile testing workflow.
+JavaScript fundamentals applied to software testing and QA automation.
 
-**Topics:**
-- User Stories
-- Acceptance Criteria
-- Product and Sprint Backlogs
-- Sprint Planning
-- Definition of Done
-- QA activities within Scrum
+**Topics Covered:**
+- Variables and data types
+- Operators and conditional statements
+- Loops and functions
+- Arrays and objects
+- Array methods
+- Modules and code organization
+- CommonJS modules
+- Error handling and validation
 
-### 04 — Automation Testing with Cypress
+The objective was to build the programming foundation required for automated testing.
 
-*Planned*
+### 04 — QA Test Runner
 
-This project will focus on automating web application testing using Cypress and JavaScript.
+A JavaScript-based test execution tool developed to practice programming fundamentals and basic QA automation concepts.
 
-**Learning Objectives:**
-- JavaScript fundamentals for testing
-- Cypress installation and configuration
-- DOM elements and selectors
-- Automated test cases
-- Assertions and validations
-- Hooks and reusable commands
-- Functional and End-to-End test automation
-- Test execution and reporting
-- CI/CD integration with GitHub Actions
+**Features:**
+- Modular test case management
+- Test validation using comparison operators
+- Automated PASS / FAIL results
+- Invalid test data detection
+- Execution summary report
+- Success rate calculation
 
-The objective is to progressively automate selected test cases originally designed during the manual testing phase.
+**Technologies:**
+- JavaScript
+- Node.js
+- CommonJS modules
+
+**Execution:**
+
+Run from the repository root:
+
+```bash
+node 04-qa-test-runner/test-runner.js
+```
+
+### 05 — Cypress Automation
+
+Automated end-to-end testing of the SauceDemo application using Cypress and JavaScript.
+
+**Automated Test Coverage:**
+
+| Test Suite | Test Cases |
+|---|---:|
+| Login | 7 |
+| Inventory | 3 |
+| Cart | 3 |
+| Checkout | 2 |
+| **Total** | **15** |
+
+**Automation Features:**
+- Custom Cypress commands for reusable login functionality.
+- Test data management using JSON fixtures.
+- Data-driven testing for invalid login scenarios.
+- Assertions for UI elements, navigation, and application behavior.
+- Screenshots on test failures.
+- Video recording of test execution.
+
+**Run Tests Locally:**
+
+Navigate to the Cypress project:
+
+```bash
+cd 05-cypress-automation
+npm install
+npx cypress open
+```
+
+To execute all tests in the terminal:
+
+```bash
+npx cypress run
+```
+
+**Continuous Integration:**
+
+GitHub Actions automatically executes the Cypress test suite when code is pushed to the `main` branch or when a pull request targets `main`.
+
+The workflow also uploads Cypress execution evidence as artifacts when available.
 
 ## Project Architecture
 
@@ -147,31 +202,27 @@ software-qa-portfolio/
     └── package-lock.json
 ```
 
-### Project Sections
+## Continuous Integration
 
-- **01 - Manual Testing:** Test planning, test cases, test suites, bug reporting, exploratory testing and test evidence.
-- **02 - API Testing:** REST API testing and validation using Postman.
-- **03 - JavaScript Fundamentals:** JavaScript concepts and exercises applied to QA Automation.
-- **04 - QA Test Runner:** A JavaScript-based test execution project.
-- **05 - Cypress Automation:** End-to-end automated testing using Cypress, fixtures and custom commands.
+The project uses GitHub Actions to automate Cypress test execution.
 
-### Continuous Integration
+**Workflow:** `.github/workflows/cypress.yml`
 
-GitHub Actions automatically executes the Cypress test suite when changes are pushed to the `main` branch or when a pull request targets `main`.
-
-Workflow: `.github/workflows/cypress.yml`
-
-
-## Learning Roadmap
+The workflow:
+- Runs on pushes to `main`.
+- Runs on pull requests targeting `main`.
+- Installs dependencies using `npm ci`.
+- Executes Cypress tests in headless mode.
+- Uploads available screenshots and videos as workflow artifacts.
 
 ## Learning Roadmap
 
 - [x] QA fundamentals and software testing concepts
-- [x] Initial manual Test Plan
+- [x] Manual Test Plan
 - [x] Functional testing and test case design
 - [x] Positive and negative testing
-- [~] Equivalence partitioning and boundary value analysis
-- [~] Bug reporting and defect management
+- [x] Equivalence partitioning and boundary value analysis
+- [x] Bug reporting and defect management
 - [x] Smoke testing
 - [x] Regression testing
 - [x] Exploratory testing
@@ -179,66 +230,35 @@ Workflow: `.github/workflows/cypress.yml`
 - [x] Agile and Scrum fundamentals
 - [x] REST API testing with Postman
 - [x] JavaScript fundamentals for test automation
-- [ ] Cypress automated testing
-- [ ] Automated test execution in CI/CD
-
-**Legend:**
-- `[x]` Completed
-- `[~]` In progress / fundamentals covered
-- `[ ]` Not started
-
-## QA Test Runner
-
-A simple JavaScript-based test execution tool developed to practice
-JavaScript fundamentals and basic QA automation concepts.
-
-### Features
-
-- Modular test case management
-- Test validation using comparison operators
-- Automated PASS / FAIL results
-- Invalid test data detection
-- Execution summary report
-- Success rate calculation
-
-### Technologies
-
-- JavaScript
-- Node.js
-- CommonJS modules
-
-### Execution
-
-Run the following command from the project root:
-
-```bash
-node 04-qa-test-runner/test-runner.js
-
+- [x] JavaScript QA Test Runner
+- [x] Cypress automated testing
+- [x] Automated test execution with GitHub Actions
 
 ## Project Goals
 
 - Apply software testing concepts to practical scenarios.
 - Build reusable and maintainable test documentation.
 - Improve defect identification and reporting skills.
-- Learn API testing and automated assertions.
-- Develop JavaScript programming skills for QA automation.
-- Implement automated web tests using Cypress.
-- Build a portfolio demonstrating progressive QA experience.
+- Develop API testing and automated assertion skills.
+- Strengthen JavaScript programming skills for QA automation.
+- Implement reliable automated web tests using Cypress.
+- Practice continuous integration with GitHub Actions.
+- Build a portfolio demonstrating practical QA skills.
 
 ## Documentation Approach
 
-All testing activities will be documented using consistent templates and naming conventions.
+All testing activities are documented using consistent templates and naming conventions.
 
-Test cases will include preconditions, test data, execution steps, expected results, actual results, and execution status.
+Test cases include preconditions, test data, execution steps, expected results, actual results, and execution status.
 
-Defect reports will include reproduction steps, severity, priority, expected and actual behavior, and supporting evidence when available.
+Defect reports include reproduction steps, severity, priority, expected and actual behavior, and supporting evidence when available.
 
-Only tests that have actually been executed will be reported as completed.
+Only tests that have actually been executed are reported as completed.
 
 ## Continuous Improvement
 
-This repository is an evolving learning portfolio. Documentation, testing coverage, automation scripts, and project organization will be updated as new skills are developed.
+This repository is an evolving learning portfolio. Documentation, testing coverage, automation scripts, and project organization will continue to improve as new skills and testing techniques are developed.
 
 ---
 
-**Current Focus:** Manual Testing — Functional Testing and Test Case Design.
+**Current Focus:** Portfolio consolidation, test documentation review, and further QA automation practice.
