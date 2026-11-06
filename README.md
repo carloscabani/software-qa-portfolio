@@ -106,37 +106,61 @@ This project will focus on automating web application testing using Cypress and 
 
 The objective is to progressively automate selected test cases originally designed during the manual testing phase.
 
-## Repository Structure
+## Project Architecture
 
-The repository will progressively follow this structure:
+The repository is organized into independent sections covering the main areas of Software Quality Assurance and Test Automation.
 
 ```text
 software-qa-portfolio/
-|
-|-- README.md
-|
-|-- 01-manual-testing/
-|   |-- saucedemo/
-|       |-- test-plan.md
-|       |-- test-cases/
-|       |-- test-suites/
-|       |-- bug-reports/
-|       |-- exploratory-testing/
-|       |-- test-reports/
-|       |-- evidence/
-|
-|-- 02-api-testing/
-|   |-- postman/
-|
-|-- 03-agile-scrum/
-|   |-- user-stories/
-|   |-- sprint-simulation/
-|
-|-- 04-automation-testing/
-    |-- cypress/
+│
+├── .github/
+│   └── workflows/
+│       └── cypress.yml
+│
+├── README.md
+├── .gitignore
+│
+├── 01-manual-testing/
+│   └── saucedemo/
+│       ├── test-plan.md
+│       ├── test-cases/
+│       ├── test-suites/
+│       ├── bug-reports/
+│       ├── exploratory-testing/
+│       ├── test-reports/
+│       └── evidence/
+│
+├── 02-api-testing/
+│   └── postman/
+│
+├── 03-javascript-fundamentals/
+│
+├── 04-qa-test-runner/
+│
+└── 05-cypress-automation/
+    ├── cypress/
+    │   ├── e2e/
+    │   ├── fixtures/
+    │   └── support/
+    ├── cypress.config.js
+    ├── package.json
+    └── package-lock.json
 ```
 
-*Note: Directories and files will be added as each learning milestone is completed.*
+### Project Sections
+
+- **01 - Manual Testing:** Test planning, test cases, test suites, bug reporting, exploratory testing and test evidence.
+- **02 - API Testing:** REST API testing and validation using Postman.
+- **03 - JavaScript Fundamentals:** JavaScript concepts and exercises applied to QA Automation.
+- **04 - QA Test Runner:** A JavaScript-based test execution project.
+- **05 - Cypress Automation:** End-to-end automated testing using Cypress, fixtures and custom commands.
+
+### Continuous Integration
+
+GitHub Actions automatically executes the Cypress test suite when changes are pushed to the `main` branch or when a pull request targets `main`.
+
+Workflow: `.github/workflows/cypress.yml`
+
 
 ## Learning Roadmap
 
