@@ -28,3 +28,14 @@ jobs:
       - name: Run Cypress tests
         working-directory: 05-cypress-automation
         run: npx cypress run
+
+      - name: Upload Cypress artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-evidence
+          path: |
+            05-cypress-automation/cypress/screenshots/
+            05-cypress-automation/cypress/videos/
+          if-no-files-found: ignore
+          retention-days: 7
